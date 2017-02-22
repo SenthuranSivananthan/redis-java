@@ -5,6 +5,13 @@ import org.apache.logging.log4j.Logger;
 
 import com.lambdaworks.redis.pubsub.RedisPubSubListener;
 
+/**
+ * Example listener that will rebuild the cache based on the data passed to the
+ * channel.
+ * 
+ * @author Senthuran Sivananthan
+ *
+ */
 public final class RebuildCacheListener implements RedisPubSubListener<String, String> {
 	private static final Logger logger = LogManager.getLogger(RebuildCacheListener.class);
 
